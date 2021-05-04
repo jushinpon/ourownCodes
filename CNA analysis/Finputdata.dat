@@ -1,0 +1,8 @@
+cfgfile: "../CNA/00stress_0.cfg"
+outputfile: "./00stress_0.out"
+atomtypeNo: 5
+CNAtypeNo: 5
+cutoff:  3.75
+pbcx: .True.
+pbcy: .True.
+pbcz: .True.
