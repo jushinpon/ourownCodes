@@ -1,0 +1,277 @@
+LAMMPS (15 Jun 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:95)
+  using 1 OpenMP thread(s) per MPI task
+using multi-threaded neighbor list subroutines
+set 32 OpenMP thread(s) per MPI task
+using multi-threaded neighbor list subroutines
+WARNING: Atom_style hybrid defines both pertype and peratom masses - both must be set, only peratom masses will be used (../atom_vec_hybrid.cpp:157)
+Reading data file ...
+  orthogonal box = (0.0 0.0 0.0) to (420.0 420.0 420.0)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  753 atoms
+  reading velocities ...
+  753 velocities
+  753 ellipsoids
+  scanning bonds ...
+  2 = max bonds/atom
+  reading bonds ...
+  752 bonds
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:   0          0          0         
+  special bond factors coul: 0          0          0         
+  2 = max # of 1-2 neighbors
+  2 = max # of 1-3 neighbors
+  4 = max # of 1-4 neighbors
+  6 = max # of special neighbors
+  special bonds CPU = 0.000581 secs
+  read_data CPU = 0.021 secs
+Setting atom values ...
+  753 settings made for mass753 atoms in group all
+Finding 1-2 1-3 1-4 neighbors ...
+ Special bond factors lj:   0          1          1         
+ Special bond factors coul: 1          1          1         
+No /omp style for force computation currently active
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 3.6592
+  ghost atom cutoff = 3.6592
+  binsize = 1.8296, bins = 110 116 21
+  6 neighbor lists, perpetual/occasional/extra = 6 0 0
+  (1) pair oxdna2/excv, perpetual
+      attributes: half, newton off, omp
+      pair build: half/bin/newtoff/omp
+      stencil: half/bin/3d/newtoff
+      bin: standard
+  (2) pair oxdna2/stk, perpetual, copy from (1)
+      attributes: half, newton off, omp
+      pair build: copy
+      stencil: none
+      bin: none
+  (3) pair oxdna2/hbond, perpetual, copy from (1)
+      attributes: half, newton off, omp
+      pair build: copy
+      stencil: none
+      bin: none
+  (4) pair oxdna2/xstk, perpetual, copy from (1)
+      attributes: half, newton off, omp
+      pair build: copy
+      stencil: none
+      bin: none
+  (5) pair oxdna2/coaxstk, perpetual, copy from (1)
+      attributes: half, newton off, omp
+      pair build: copy
+      stencil: none
+      bin: none
+  (6) pair oxdna2/dh, perpetual, copy from (1)
+      attributes: half, newton off, omp
+      pair build: copy
+      stencil: none
+      bin: none
+Setting up cg style minimization ...
+  Unit style    : lj
+  Current step  : 0
+Per MPI rank memory allocation (min/avg/max) = 112.5 | 112.5 | 112.5 Mbytes
+Step Temp TotEng E_vdwl 
+       0            0   -1.3486175   -1.3605084 
+WARNING: FENE bond too long: 7 2 1 0.516729 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 9 3 2 0.51082 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 23 13 12 0.502454 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 29 11 10 0.511625 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 32 14 13 0.514324 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 32 17 16 0.503876 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 36 14 13 0.516341 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 47 12 11 0.514387 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 50 14 13 0.512208 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 52 29 28 0.510152 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 54 28 27 0.51354 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 55 28 27 0.517695 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 56 29 28 0.510348 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 59 14 13 0.506267 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 59 25 24 0.506362 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 60 32 31 0.518333 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 61 25 24 0.502436 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 61 33 32 0.493055 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 329 268 267 0.498849 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 332 266 265 0.496264 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 336 266 265 0.503077 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 337 265 264 0.517815 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 337 267 266 0.502571 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 338 266 265 0.501575 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 338 268 267 0.513543 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 339 265 264 0.51596 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 339 267 266 0.500062 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 340 266 265 0.501667 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 340 268 267 0.510581 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 341 265 264 0.515113 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 341 267 266 0.499149 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 342 266 265 0.501704 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 342 268 267 0.50813 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 343 265 264 0.514482 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 343 267 266 0.498472 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 344 266 265 0.501732 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 344 268 267 0.506038 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 345 265 264 0.513989 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 345 267 266 0.497933 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 346 266 265 0.501758 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 346 268 267 0.504252 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 347 265 264 0.513596 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 347 267 266 0.497473 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 347 269 268 0.517202 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 348 266 265 0.501787 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 348 268 267 0.502703 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 349 265 264 0.513282 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 349 267 266 0.497056 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 349 269 268 0.514073 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 350 266 265 0.501826 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 350 268 267 0.501336 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 351 265 264 0.513032 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 351 267 266 0.496658 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 351 269 268 0.511257 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 352 266 265 0.501874 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 352 268 267 0.500105 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 353 265 264 0.512837 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 353 267 266 0.496265 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 353 269 268 0.50868 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 354 266 265 0.501932 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 354 268 267 0.498979 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 355 265 264 0.512688 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 355 267 266 0.495866 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 355 269 268 0.506286 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 356 266 265 0.502002 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 356 268 267 0.497933 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 357 265 264 0.512578 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 357 267 266 0.495458 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 357 269 268 0.504033 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 358 266 265 0.502082 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 358 268 267 0.49695 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 358 270 269 0.517526 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 359 265 264 0.512503 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 359 267 266 0.495036 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 359 269 268 0.501889 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 360 266 265 0.502171 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 360 268 267 0.496016 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 360 270 269 0.514388 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 361 265 264 0.514082 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 361 267 266 0.496348 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 361 269 268 0.501546 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 362 266 265 0.502268 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 362 268 267 0.495109 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 362 270 269 0.5114 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 363 265 264 0.51648 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 363 267 266 0.498512 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 363 269 268 0.502149 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 364 266 265 0.502909 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 364 268 267 0.49478 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 364 270 269 0.509069 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 380 277 276 0.516107 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 390 257 256 0.517482 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 390 277 276 0.517108 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 396 256 255 0.508921 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 397 257 256 0.504287 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 398 256 255 0.508159 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 398 276 275 0.509938 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 398 278 277 0.519212 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 401 257 256 0.511458 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 405 257 256 0.5091 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 406 256 255 0.510892 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 407 257 256 0.50079 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 408 256 255 0.509884 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 409 257 256 0.49397 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 412 257 256 0.494554 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 413 256 255 0.509749 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 414 257 256 0.489402 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 421 251 250 0.508014 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 421 253 252 0.512906 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 423 252 251 0.483279 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 423 260 259 0.499351 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 425 251 250 0.513575 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 425 253 252 0.518768 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 428 252 251 0.486063 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 428 260 259 0.505275 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 433 256 255 0.500402 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 438 252 251 0.502351 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 440 256 255 0.512926 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 442 252 251 0.519145 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 446 252 251 0.511461 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 450 252 251 0.512782 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 454 252 251 0.515192 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 459 251 250 0.514578 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 459 256 255 0.512125 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 460 247 246 0.508659 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 460 252 251 0.496032 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 469 263 262 0.511109 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 470 267 266 0.487127 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 471 263 262 0.514566 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 479 263 262 0.506415 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 479 435 434 0.515767 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 479 437 436 0.513215 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 479 439 438 0.512865 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 479 441 440 0.515075 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 432 431 0.512317 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 434 433 0.506812 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 436 435 0.50328 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 438 437 0.50195 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 440 439 0.503139 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 442 441 0.507231 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 485 444 443 0.514515 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 487 433 432 0.517606 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 487 435 434 0.513819 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 487 437 436 0.512041 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 487 439 438 0.512508 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 487 441 440 0.515537 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 489 434 433 0.519169 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 489 436 435 0.516991 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 489 438 437 0.516892 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 489 440 439 0.51912 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 491 435 434 0.51831 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 491 437 436 0.517047 (../bond_oxdna_fene.cpp:223)
+WARNING: FENE bond too long: 491 439 438 0.517993 (../bond_oxdna_fene.cpp:223)
+   10000            0     -1.64427    -1.769195 
+   20000            0     -1.64427    -1.769195 
+   24701            0     -1.64427    -1.769195 
+Loop time of 155.054 on 32 procs for 24701 steps with 753 atoms
+
+2785.3% CPU use with 1 MPI tasks x 32 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max force evaluations
+  Energy initial, next-to-last, final = 
+        -1.34861749291     -1.64426999545     -1.64426999545
+  Force two-norm initial, final = 83.2886 7.43547e-11
+  Force max component initial, final = 4.7059 6.90514e-12
+  Final line search alpha, max atom move = 1 6.90514e-12
+  Iterations, force evaluations = 24701 50000
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 136.11     | 136.11     | 136.11     |   0.0 | 87.78
+Bond    | 6.8266     | 6.8266     | 6.8266     |   0.0 |  4.40
+Neigh   | 0.028708   | 0.028708   | 0.028708   |   0.0 |  0.02
+Comm    | 0.005374   | 0.005374   | 0.005374   |   0.0 |  0.00
+Output  | 0.0011315  | 0.0011315  | 0.0011315  |   0.0 |  0.00
+Modify  | 11.41      | 11.41      | 11.41      |   0.0 |  7.36
+Other   |            | 0.6685     |            |       |  0.43
+
+Nlocal:    753 ave 753 max 753 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    5988 ave 5988 max 5988 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 5988
+Ave neighs/atom = 7.95219
+Ave special neighs/atom = 5.98406
+Neighbor list builds = 27
+Dangerous builds = 0
+System init for write_data ...
+Finding 1-2 1-3 1-4 neighbors ...
+ Special bond factors lj:   0          1          1         
+ Special bond factors coul: 1          1          1         
+No /omp style for force computation currently active
+WARNING: System has ellipsoids, lines, triangles, or bodies. Those are not yet supported by write_data. The data file will thus be incomplete. (../write_data.cpp:182)
+ERROR: Unknown command: 111111111111111111111111111111111111111 (../input.cpp:233)
+Last command: 111111111111111111111111111111111111111

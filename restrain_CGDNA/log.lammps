@@ -1,0 +1,75 @@
+LAMMPS (30 Nov 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+variable number	equal 1
+variable ofreq	equal 1000
+variable efreq	equal 1000
+variable T      equal 0.1
+variable R0 equal 0.7
+variable restrainloop loop 4 ###***
+variable restrainNo equal 4 ###***
+
+units lj
+
+dimension 3
+
+newton off
+
+boundary  s s s
+
+atom_style hybrid bond ellipsoid
+WARNING: Atom_style hybrid defines both pertype and peratom masses - both must be set, only peratom masses will be used (../atom_vec_hybrid.cpp:157)
+atom_modify sort 0 1.0
+
+# Pair interactions require lists of neighbours to be calculated
+neighbor 1.0 bin
+neigh_modify every 1 delay 0 check yes
+
+read_data data.oxdna
+Reading data file ...
+  orthogonal box = (0.0000000 0.0000000 0.0000000) to (420.00000 420.00000 420.00000)
+  2 by 2 by 2 MPI processor grid
+  reading atoms ...
+  753 atoms
+  reading velocities ...
+  753 velocities
+  753 ellipsoids
+  scanning bonds ...
+  2 = max bonds/atom
+  reading bonds ...
+  752 bonds
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     2 = max # of 1-3 neighbors
+     4 = max # of 1-4 neighbors
+     6 = max # of special neighbors
+  special bonds CPU = 0.001 seconds
+  read_data CPU = 0.008 seconds
+#include first_atom.in
+#include second_atom.in
+
+set atom * mass 3.1575
+Setting atom values ...
+  753 settings made for mass
+
+#label restrain
+
+#print "${start} ${end}"
+#fix restrain_${restrainloop} all restrain bond ${start} ${end} 0.45 0.45 ${R0}
+#fix_modify restrain_${restrainloop} energy yes
+
+#next start
+#next end
+#next restrainloop
+#jump SELF restrain
+############ Restrain ##############
+
+group all type 1 4
+753 atoms in group all
+
+# oxDNA bond interactions - FENE backbone
+bond_style oxdna2/fene
+ERROR: Unrecognized bond style 'oxdna2/fene' is part of the USER-CGDNA package which is not enabled in this LAMMPS binary. (../force.cpp:390)
+Last command: bond_style oxdna2/fene
