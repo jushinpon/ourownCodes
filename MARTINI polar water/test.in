@@ -1,0 +1,43 @@
+variable rand 		equal random(90000,100000,123456)
+variable seed 		equal round(${rand})
+units           real
+atom_style      full
+boundary		p p p
+special_bonds lj/coul 0 1 1# angle yes dihedral yes#關閉interaction
+dielectric 1 #介電係數
+neighbor        1.4 bin				#1.2 bin
+neigh_modify    every 5 delay 10 one 5000 check yes
+timestep 10
+#neigh_modify	every 1 delay 0  check yes one 1000
+read_data      water_test.data
+include 		water_test.in	#forcefield parameters
+pair_modify 	shift yes 
+#write_data 12.data nocoeff
+#pair_modify tail yes
+#compute 1 all bond/local engpot
+#compute        peratom all pe/atom bond
+#compute        pe all reduce sum c_peratom
+thermo_style 	custom step temp pe press eangle density evdwl ecoul
+thermo 500
+minimize 0 0 5000 5000
+
+velocity all create 298 ${seed} mom yes rot yes dist gaussian  
+#dump 1 all local 1 tmp.dump index        c_1[*]
+#run_style        respa 4 2 2 2 bond 1 angle 2 pair 3 kspace 4 
+reset_timestep 0
+#fix 1 all nvt temp 300 300 100
+fix 1 all npt temp 300.0 300.0 100.0 iso 1000 0.0 1000
+#fix 2 all print 3 "$(ebond) $(eangle) $(edihed) $(eimp) $(evdwl)"
+run 500000 every 20000 " write_data npt_water_*.data nocoeff "
+unfix 1
+
+reset_timestep 0
+fix 1 all npt temp 300.0 300.0 100.0 iso 0.0 0.0 1000
+run 500000 every 20000 " write_data npt_water_Relax_*.data nocoeff "
+unfix 1
+
+#run 0
+#unfix 2
+#thermo_style custom step temp evdwl press pe etotal density
+#minimize 0 0 20000 20000
+write_data final_water_npt.data nocoeff
