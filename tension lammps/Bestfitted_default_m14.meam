@@ -1,0 +1,332 @@
+# MEAM C, Ta alloy potential system (This file should be combined 
+# developed by Prof. Shin-Pon Ju at NSYSU 2016/06/24
+#	modified by Cheng-Chia Yang at 2016/12/19
+# The MEAM form is from "https://openkim.org/f/all-posts", so you may refer to the instruction how to set lammps parameters
+# The following terms have No default settings (need to be provided for cross-element system): 
+#1. Ec(I,J) or delta(I,J)
+#2. alpha(I,J)
+#3. re(I,J)
+#4. lattce(I,J)
+
+#This part keeps the known parameters
+
+  erose_form = 2
+  rc = 5.5
+  ialloy=2 
+  augt1=0
+  delr=0.1
+  emb_lin_neg=0
+  bkgd_dyn=0
+  mixture_ref_t =0  
+ 
+  nn2(1,1)=1   
+  nn2(2,2)=1 
+  nn2(3,3)=1   
+  nn2(4,4)=1 
+  nn2(5,5)=1   
+  zbl(1,1)=0
+  zbl(2,2)=0  
+  zbl(3,3)=0
+  zbl(4,4)=0 
+  zbl(5,5)=0 
+
+  
+Cmin(1,1,1) = 1.69
+Cmin(2,2,2) = 2.0
+Cmin(3,3,3) = 0.49
+Cmin(4,4,4) = 0.719
+Cmin(5,5,5) = 1.53
+Cmax(1,1,1) = 2.80
+Cmax(2,2,2) = 2.80
+Cmax(3,3,3) = 2.00
+Cmax(4,4,4) = 2.80
+Cmax(5,5,5) = 2.80
+
+
+
+
+
+#####***The following data is used to fitted from the minor modification of Dmol3 data***######
+
+## For PdRh, lammps types: 1,2
+
+nn2(1,2)= 1
+zbl(1,2)= 1
+lattce(1,2)= 'b2'
+Ec(1,2)=        4.583
+re(1,2)=        2.697
+alpha(1,2)=        6.892
+
+## For PdCo, lammps types: 1,3
+
+nn2(1,3)= 1
+zbl(1,3)= 1
+lattce(1,3)= 'b2'
+Ec(1,3)=        4.012
+re(1,3)=        2.567
+alpha(1,3)=        8.066
+
+## For PdCe, lammps types: 1,4
+
+nn2(1,4)= 1
+zbl(1,4)= 1
+lattce(1,4)= 'b2'
+Ec(1,4)=        6.014
+re(1,4)=        2.937
+alpha(1,4)=        9.621
+
+## For PdPt, lammps types: 1,5
+
+nn2(1,5)= 1
+zbl(1,5)= 1
+lattce(1,5)= 'b2'
+Ec(1,5)=        4.808
+re(1,5)=        2.700
+alpha(1,5)=        6.639
+
+## For RhCo, lammps types: 2,3
+
+nn2(2,3)= 1
+zbl(2,3)= 1
+lattce(2,3)= 'b2'
+Ec(2,3)=        4.968
+re(2,3)=        2.575
+alpha(2,3)=        5.328
+
+## For RhCe, lammps types: 2,4
+
+nn2(2,4)= 1
+zbl(2,4)= 1
+lattce(2,4)= 'b2'
+Ec(2,4)=        6.792
+re(2,4)=        2.944
+alpha(2,4)=        7.811
+
+## For RhPt, lammps types: 2,5
+
+nn2(2,5)= 1
+zbl(2,5)= 1
+lattce(2,5)= 'b2'
+Ec(2,5)=        5.490
+re(2,5)=        2.733
+alpha(2,5)=        5.824
+
+## For CoCe, lammps types: 3,4
+
+nn2(3,4)= 1
+zbl(3,4)= 1
+lattce(3,4)= 'b2'
+Ec(3,4)=        5.035
+re(3,4)=        2.988
+alpha(3,4)=        3.411
+
+## For CoPt, lammps types: 3,5
+
+nn2(3,5)= 1
+zbl(3,5)= 1
+lattce(3,5)= 'b2'
+Ec(3,5)=        4.947
+re(3,5)=        2.600
+alpha(3,5)=        5.494
+
+## For CePt, lammps types: 4,5
+
+nn2(4,5)= 1
+zbl(4,5)= 1
+lattce(4,5)= 'b2'
+Ec(4,5)=        7.337
+re(4,5)=        3.366
+alpha(4,5)=        7.699
+
+
+
+
+#####***The following data is used to be fitted by randomly generating values within ranges***######
+
+rho0(1)= 1
+
+##For PdRh, Lammps types: 1,2
+
+attrac(1,2)=        0.000
+repuls(1,2)=        0.000
+Cmin(1,2,1)=        1.652
+Cmax(1,2,1)=        1.868
+Cmin(1,2,2)=        0.431
+Cmax(1,2,2)=        2.013
+Cmin(1,2,3)=        2.000
+Cmax(1,2,3)=        2.800
+Cmin(1,2,4)=        2.000
+Cmax(1,2,4)=        2.800
+Cmin(1,2,5)=        2.000
+Cmax(1,2,5)=        2.800
+##For PdCo, Lammps types: 1,3
+
+attrac(1,3)=        0.000
+repuls(1,3)=        0.000
+Cmin(1,3,1)=        2.000
+Cmax(1,3,1)=        2.799
+Cmin(1,3,2)=        2.000
+Cmax(1,3,2)=        2.800
+Cmin(1,3,3)=        1.433
+Cmax(1,3,3)=        1.734
+Cmin(1,3,4)=        2.000
+Cmax(1,3,4)=        2.800
+Cmin(1,3,5)=        2.000
+Cmax(1,3,5)=        2.800
+##For PdCe, Lammps types: 1,4
+
+attrac(1,4)=        0.000
+repuls(1,4)=        0.000
+Cmin(1,4,1)=        2.000
+Cmax(1,4,1)=        2.8
+Cmin(1,4,2)=        2.000
+Cmax(1,4,2)=        2.800
+Cmin(1,4,3)=        2.000
+Cmax(1,4,3)=        2.800
+Cmin(1,4,4)=        0.102
+Cmax(1,4,4)=        2.800
+Cmin(1,4,5)=        2.000
+Cmax(1,4,5)=        2.800
+##For PdPt, Lammps types: 1,5
+
+attrac(1,5)=        0.000
+repuls(1,5)=        0.000
+Cmin(1,5,1)=        0.261
+Cmax(1,5,1)=        1.987
+Cmin(1,5,2)=        2.000
+Cmax(1,5,2)=        2.800
+Cmin(1,5,3)=        2.000
+Cmax(1,5,3)=        2.800
+Cmin(1,5,4)=        2.000
+Cmax(1,5,4)=        2.800
+Cmin(1,5,5)=        0.100
+Cmax(1,5,5)=        1.432
+Cmin(1,1,2)=        0.805
+Cmax(1,1,2)=        2.146
+Cmin(1,1,3)=        1.633
+Cmax(1,1,3)=        2.089
+Cmin(1,1,4)=        1.942
+Cmax(1,1,4)=        2.8
+Cmin(1,1,5)=        1.311
+Cmax(1,1,5)=        1.686
+##For RhCo, Lammps types: 2,3
+
+attrac(2,3)=        0.000
+repuls(2,3)=        0.000
+Cmin(2,3,1)=        2.000
+Cmax(2,3,1)=        2.800
+Cmin(2,3,2)=        0.953
+Cmax(2,3,2)=        2.568
+Cmin(2,3,3)=        0.100
+Cmax(2,3,3)=        1.400
+Cmin(2,3,4)=        2.000
+Cmax(2,3,4)=        2.800
+Cmin(2,3,5)=        2.000
+Cmax(2,3,5)=        2.800
+##For RhCe, Lammps types: 2,4
+
+attrac(2,4)=        0.000
+repuls(2,4)=        0.000
+Cmin(2,4,1)=        2.000
+Cmax(2,4,1)=        2.800
+Cmin(2,4,2)=        0.100
+Cmax(2,4,2)=        2.314
+Cmin(2,4,3)=        2.000
+Cmax(2,4,3)=        2.800
+Cmin(2,4,4)=        2.000
+Cmax(2,4,4)=        2.800
+Cmin(2,4,5)=        2.000
+Cmax(2,4,5)=        2.800
+##For RhPt, Lammps types: 2,5
+
+attrac(2,5)=        0.000
+repuls(2,5)=        0.000
+Cmin(2,5,1)=        2.000
+Cmax(2,5,1)=        2.800
+Cmin(2,5,2)=        1.615
+Cmax(2,5,2)=        2.800
+Cmin(2,5,3)=        2.000
+Cmax(2,5,3)=        2.800
+Cmin(2,5,4)=        2.000
+Cmax(2,5,4)=        2.800
+Cmin(2,5,5)=        0.796
+Cmax(2,5,5)=        1.400
+Cmin(2,2,1)=        1.785
+Cmax(2,2,1)=        2.393
+Cmin(2,2,3)=        0.636
+Cmax(2,2,3)=        1.456
+Cmin(2,2,4)=        1.934
+Cmax(2,2,4)=        2.089
+Cmin(2,2,5)=        1.683
+Cmax(2,2,5)=        2.332
+rho0(2)=        1.000
+##For CoCe, Lammps types: 3,4
+
+attrac(3,4)=        0.000
+repuls(3,4)=        0.000
+Cmin(3,4,1)=        2.000
+Cmax(3,4,1)=        2.800
+Cmin(3,4,2)=        2.000
+Cmax(3,4,2)=        2.800
+Cmin(3,4,3)=        0.862
+Cmax(3,4,3)=        2.800
+Cmin(3,4,4)=        0.385
+Cmax(3,4,4)=        1.977
+Cmin(3,4,5)=        2.000
+Cmax(3,4,5)=        2.800
+##For CoPt, Lammps types: 3,5
+
+attrac(3,5)=        0.000
+repuls(3,5)=        0.000
+Cmin(3,5,1)=        2.000
+Cmax(3,5,1)=        2.800
+Cmin(3,5,2)=        2.000
+Cmax(3,5,2)=        2.800
+Cmin(3,5,3)=        0.100
+Cmax(3,5,3)=        2.429
+Cmin(3,5,4)=        2.000
+Cmax(3,5,4)=        2.800
+Cmin(3,5,5)=        0.100
+Cmax(3,5,5)=        2.800
+Cmin(3,3,1)=        1.246
+Cmax(3,3,1)=        2.800
+Cmin(3,3,2)=        0.112
+Cmax(3,3,2)=        1.799
+Cmin(3,3,4)=        0.623
+Cmax(3,3,4)=        2.793
+Cmin(3,3,5)=        1.995
+Cmax(3,3,5)=        2.800
+rho0(3)=        1.000
+##For CePt, Lammps types: 4,5
+
+attrac(4,5)=        0.000
+repuls(4,5)=        0.000
+Cmin(4,5,1)=        2.000
+Cmax(4,5,1)=        2.800
+Cmin(4,5,2)=        2.000
+Cmax(4,5,2)=        2.800
+Cmin(4,5,3)=        2.000
+Cmax(4,5,3)=        2.800
+Cmin(4,5,4)=        1.479
+Cmax(4,5,4)=        1.648
+Cmin(4,5,5)=        1.946
+Cmax(4,5,5)=        2.515
+Cmin(4,4,1)=        0.100
+Cmax(4,4,1)=        2.416
+Cmin(4,4,2)=        0.645
+Cmax(4,4,2)=        2.282
+Cmin(4,4,3)=        1.270
+Cmax(4,4,3)=        2.093
+Cmin(4,4,5)=        2.000
+Cmax(4,4,5)=        2.800
+rho0(4)=        1.000
+Cmin(5,5,1)=        0.100
+Cmax(5,5,1)=        1.453
+Cmin(5,5,2)=        1.508
+Cmax(5,5,2)=        2.390
+Cmin(5,5,3)=        0.100
+Cmax(5,5,3)=        1.703
+Cmin(5,5,4)=        0.706
+Cmax(5,5,4)=        2.312
+rho0(5)=        1.000
+

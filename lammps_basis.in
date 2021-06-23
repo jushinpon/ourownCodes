@@ -1,0 +1,21 @@
+#Lattice custom example for ice VII crystal structure (all atom)
+
+lattice custom 1.0 &    
+a1  -0.506460339  -0.000000000   0.506460339 &
+a2  0.000000000   0.506460339   0.506460339 &
+a3  -0.506460339   0.506460339  -0.000000000 &
+basis     0.000000000         0.000000000         0.000000000 &
+basis     0.2532301693        0.2532301693        0.2532301693 &
+
+region        sim block 0 1 0 1 0 1 units lattice
+
+create_box      1 sim
+create_atoms    1 region sim          &
+        basis   1       1       &
+		basis   2       1		
+		
+mass 1 1
+
+group C type 1
+write_data test.data
+
