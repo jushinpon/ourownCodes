@@ -1,0 +1,5 @@
+cutoff:  5.00
+pbcx: .False.
+pbcy: .False.
+pbcz: .False.
+max_neigh: 100
