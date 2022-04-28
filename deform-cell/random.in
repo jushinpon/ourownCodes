@@ -1,0 +1,42 @@
+variable seed equal 7940120
+variable rn_temp equal round(random(1,100000,${seed})) ## integer random number from 0 to 100000
+variable rn equal v_rn_temp/100000.0
+
+variable leng_rn equal round(random(-10000,10000,v_rn))
+variable ang_rn equal round(random(0.98,1.02,v_rn))
+print "leng_rn: v_rn, ang_rn: ${ang_rn},${rn}"
+print "leng_rn: v_rn, ang_rn: ${ang_rn},${rn}"
+print "leng_rn: v_rn, ang_rn: ${ang_rn},${rn}"
+print "leng_rn: v_rn, ang_rn: ${ang_rn},${rn}"
+
+read_data /home/jsp/Perl4dpgen/initial/bcc_bulk/OPT-Mo.data
+
+#box length (0.9~1.1)
+variable xscale equal 1.0+(2.0*v_rn-1)*0.1
+variable yscale equal 1.0+(2.0*v_rn-1)*0.1
+variable zscale equal 1.0+(2.0*v_rn-1)*0.1
+
+#box shape (varies between -3% to +3% of original value)
+variable xy equal (1.0+(2.0*v_rn-1)*0.03)*xy
+variable xz equal (1.0+(2.0*v_rn-1)*0.03)*xz
+variable yz equal (1.0+(2.0*v_rn-1)*0.03)*yz
+
+
+variable i loop 10
+label i
+
+print "****loop ${i}"
+print "xscale: ${xscale}"
+print "yscale: ${yscale}"
+print "zscale: ${zscale}"
+print "xy: ${xy}"
+print "xz: ${xz}"
+print "yz: ${yz}"
+
+#change_box all x scale ${xscale} y scale ${yscale} z scale ${zscale} xy final ${xy} xz final ${xz} yz final ${yz} triclinic remap  units box
+displace_atoms all random 0.02 0.02 0.02 ${rn_temp} units box
+write_data deform_${i}.data
+print " "
+
+next i
+jump SELF i
