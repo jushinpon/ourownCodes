@@ -1,0 +1,15 @@
+# ---------- Initialize Simulation --------------------- 
+clear 
+units metal 
+dimension 3 
+boundary p p p 
+variable rand equal random(1,100000,123456)
+
+variable seed equal round(v_rand)
+
+variable    i loop 20
+label loop
+
+print "$i ${seed} ${seed} ${seed}"
+next i
+jump SELF loop
